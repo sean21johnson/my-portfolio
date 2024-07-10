@@ -1,0 +1,12 @@
+.profileLayout {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  gap: 100px;
+}
+
+.profileLayoutRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -78,7 +78,7 @@ const TopBar = () => {
           <WorkIcon sx={{ marginRight: 2 }} /> Experience
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <CodeIcon sx={{ marginRight: 2 }} /> Projects
+          <CodeIcon sx={{ marginRight: 2 }} /> Project
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
           <ContactsIcon sx={{ marginRight: 2 }} /> Contact

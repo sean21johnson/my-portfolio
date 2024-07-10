@@ -6,7 +6,7 @@
   --warning-color: #FFA000;
   --info-color: #0288D1;
   --success-color: #388E3C;
-  --background-default: #F5F5F5;
+  --background-default: #FAFAFA;
   --background-paper: #FFFFFF;
   --text-primary: #333333;
   --text-secondary: #575757;
@@ -26,6 +26,11 @@
   --background-paper: #1E1E1E;
   --text-primary: #FFFFFF;
   --text-secondary: #BDBDBD;
-  --divider: #333333;
-  --topbar-background: #2C2C2C;
+  --divider: #424242;
+  --topbar-background: #121212
 }
+
+body {
+  background-color: var(--background-default);
+}
+
