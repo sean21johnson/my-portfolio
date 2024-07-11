@@ -1,9 +1,9 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-import type { ThemeModeContextType } from "./types";
+import type { ThemeModeContextType } from './types';
 
 const defaultContext: ThemeModeContextType = {
-  mode: "light",
+  mode: 'light',
   toggleThemeMode: () => {},
 };
 

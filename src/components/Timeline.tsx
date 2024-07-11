@@ -35,7 +35,7 @@ const timelineEvents = [
     year: '2021',
     title: 'Software Engineer',
     description:
-      'Graduated from engineering bootcamp. Started as an Associate Frontend Engineer at Zenhub. Modernized tech stack and improved web app performance.',
+      'Graduated from Thinkful engineering program. Started as an Associate Frontend Engineer at Zenhub. Modernized tech stack and improved web app performance.',
   },
   {
     year: '2023',
@@ -91,6 +91,7 @@ const Timeline = () => {
       <Stepper alternativeLabel nonLinear sx={{ marginBottom: -1 }}>
         {timelineEvents.map((event, index) => (
           <StepButton
+            key={index}
             onClick={() => handleStepClick(event)}
             sx={{
               '& .MuiStepLabel-root .MuiStepIcon-root': {

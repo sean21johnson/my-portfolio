@@ -14,6 +14,10 @@
   --inverse-text-secondary: #c3c3c3;
   --divider: #e0e0e0;
   --topbar-background: #fafafa;
+
+  /* Carousel dot specific colors */
+  --carousel-dot-active: #000000; /* Black for light theme */
+  --carousel-dot-hover: #595959; /* Dark gray for light theme */
 }
 
 [data-theme='dark'] {
@@ -32,6 +36,10 @@
   --inverse-text-secondary: #595959;
   --divider: #424242;
   --topbar-background: #121212;
+
+  /* Carousel dot specific colors */
+  --carousel-dot-active: #ffffff; /* White for dark theme */
+  --carousel-dot-hover: #595959; /* Dark gray for dark theme */
 }
 
 body {

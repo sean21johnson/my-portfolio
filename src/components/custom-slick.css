@@ -1,0 +1,53 @@
+/* Custom styles for Slick carousel arrows */
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -45px; /* Adjust this value to add more space */
+}
+
+.slick-next {
+  right: -45px; /* Adjust this value to add more space */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: var(--primary-color); /* Initial color for the arrows */
+}
+
+/* Hover effect for arrows */
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: var(--carousel-dot-hover); /* Change to your desired hover color */
+}
+
+/* Dots */
+.slick-dots {
+  bottom: -40px; /* Adjust this value if needed to move the dots up or down */
+}
+
+.slick-dots li {
+  margin: 0 20px; /* Adjust this value to control the spacing between dots */
+}
+
+.slick-dots li button:before {
+  margin-top: 10px;
+  font-size: 20px; /* Adjust the size as needed */
+  color: var(--carousel-dot-hover);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--primary-color);
+}
+
+.slick-dots li:not(.slick-active) button:hover:before {
+  color: var(--carousel-dot-hover);
+}

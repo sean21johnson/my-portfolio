@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import useThemeMode from '../hooks/useThemeMode';
 
 const AccordionComponent = () => {
-  const [expanded, setExpanded] = useState<string | false>(false);
-
-  const { mode } = useThemeMode();
+  const [expanded, setExpanded] = useState<string | false>('panel1');
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
     setExpanded(isExpanded ? panel : false);
@@ -47,7 +44,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel1')}>Who Am I</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-3} sx={{ fontSize: 14 }}>
+          <Typography mt={-2} sx={{ fontSize: 16 }}>
             Software engineer based in Philadelphia, PA. Proven track record of leading technical
             projects and efficiently delivering quality results. Pivoted to software development in
             2020, inspired by a passion for technology after collaborating with engineering teams in
@@ -72,7 +69,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel2')}>Current Role</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-3} sx={{ fontSize: 14 }}>
+          <Typography mt={-2} sx={{ fontSize: 16 }}>
             <strong>Intermediate Frontend Engineer @ Zenhub: </strong>Collaborated with product
             managers, designers, and engineers to build robust project management suite. Led
             projects and delivered impactful results through effective communication, collaboration,
@@ -97,7 +94,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel4')}>Teamwork</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-3} sx={{ fontSize: 14 }}>
+          <Typography mt={-2} sx={{ fontSize: 16 }}>
             Team-oriented leader who builds outstanding relationships with clients and internal
             stakeholders by leveraging highly effective communication and interpersonal skills. I
             enjoy collaborating with and learning from other developers, and am a proponent of a
@@ -122,14 +119,15 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel5')}>Personal Facts</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-4} sx={{ fontSize: 14 }}>
-            <ul>
-              <li>Frontend Engineer @ ZenHub since October 2021</li>
-              <li>Career pivot to software development in 2020</li>
-              <li>NYU Stern School of Business 2018 MBA graduate</li>
-              <li>Enjoy exercising, traveling, and reading</li>
-            </ul>
-          </Typography>
+          <ul style={{ marginTop: -6 }}>
+            <li>Frontend Engineer @ ZenHub since October 2021</li>
+            <li>Thinkful Software Engineering Immersive Program 2021 graudate</li>
+            <li>Career pivot to software development in 2020</li>
+            <li>NYU Stern School of Business 2018 MBA graduate</li>
+            <li>10 years in financial services roles</li>
+            <li>Enjoy exercising, traveling, and reading</li>
+          </ul>
+          {/* </Typography> */}
         </AccordionDetails>
       </Accordion>
     </div>
