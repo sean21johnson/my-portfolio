@@ -44,7 +44,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel1')}>Who Am I</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-2} sx={{ fontSize: 16 }}>
+          <Typography mt={-2} sx={{ fontSize: 14 }}>
             Software engineer based in Philadelphia, PA. Proven track record of leading technical
             projects and efficiently delivering quality results. Pivoted to software development in
             2020, inspired by a passion for technology after collaborating with engineering teams in
@@ -69,7 +69,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel2')}>Current Role</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-2} sx={{ fontSize: 16 }}>
+          <Typography mt={-2} sx={{ fontSize: 14 }}>
             <strong>Intermediate Frontend Engineer @ Zenhub: </strong>Collaborated with product
             managers, designers, and engineers to build robust project management suite. Led
             projects and delivered impactful results through effective communication, collaboration,
@@ -94,7 +94,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel4')}>Teamwork</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography mt={-2} sx={{ fontSize: 16 }}>
+          <Typography mt={-2} sx={{ fontSize: 14 }}>
             Team-oriented leader who builds outstanding relationships with clients and internal
             stakeholders by leveraging highly effective communication and interpersonal skills. I
             enjoy collaborating with and learning from other developers, and am a proponent of a
@@ -119,7 +119,7 @@ const AccordionComponent = () => {
           <Typography sx={getExpandButtonDetails('panel5')}>Personal Facts</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <ul style={{ marginTop: -6 }}>
+          <ul style={{ marginTop: -6, fontSize: 14 }}>
             <li>Frontend Engineer @ ZenHub since October 2021</li>
             <li>Thinkful Software Engineering Immersive Program 2021 graudate</li>
             <li>Career pivot to software development in 2020</li>

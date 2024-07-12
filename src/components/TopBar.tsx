@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -8,25 +8,25 @@ import {
   Button,
   Menu,
   MenuItem,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import WorkIcon from "@mui/icons-material/Work";
-import CodeIcon from "@mui/icons-material/Code";
-import ContactsIcon from "@mui/icons-material/Contacts";
-import DescriptionIcon from "@mui/icons-material/Description";
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import WorkIcon from '@mui/icons-material/Work';
+import CodeIcon from '@mui/icons-material/Code';
+import ContactsIcon from '@mui/icons-material/Contacts';
+import DescriptionIcon from '@mui/icons-material/Description';
+import BuildIcon from '@mui/icons-material/Build';
 
-import useThemeMode from "../hooks/useThemeMode";
-import useScreenBreakpoints from "../hooks/useScreenBreakpoints";
+import useThemeMode from '../hooks/useThemeMode';
+import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
 
 const TopBar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const { mode, toggleThemeMode } = useThemeMode();
-  const { mobileScreenOnly, narrowScreenOnly, wideScreenOnly } =
-    useScreenBreakpoints();
+  const { mobileScreenOnly, narrowScreenOnly, wideScreenOnly } = useScreenBreakpoints();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -38,16 +38,10 @@ const TopBar = () => {
 
   const themeIcon = (
     <>
-      {mode === "light" ? (
-        <DarkModeIcon
-          onClick={toggleThemeMode}
-          sx={{ marginRight: mobileScreenOnly ? 2 : 0 }}
-        />
+      {mode === 'light' ? (
+        <DarkModeIcon onClick={toggleThemeMode} sx={{ marginRight: mobileScreenOnly ? 2 : 0 }} />
       ) : (
-        <LightModeIcon
-          onClick={toggleThemeMode}
-          sx={{ marginRight: mobileScreenOnly ? 2 : 0 }}
-        />
+        <LightModeIcon onClick={toggleThemeMode} sx={{ marginRight: mobileScreenOnly ? 2 : 0 }} />
       )}
     </>
   );
@@ -69,7 +63,7 @@ const TopBar = () => {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleCloseDropdown}
-        sx={{ width: "100%" }}
+        sx={{ width: '100%' }}
       >
         <MenuItem onClick={handleCloseDropdown}>
           <AccountCircleIcon sx={{ marginRight: 2 }} /> About
@@ -78,7 +72,10 @@ const TopBar = () => {
           <WorkIcon sx={{ marginRight: 2 }} /> Experience
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <CodeIcon sx={{ marginRight: 2 }} /> Project
+          <CodeIcon sx={{ marginRight: 2 }} /> Projects
+        </MenuItem>
+        <MenuItem onClick={handleCloseDropdown}>
+          <BuildIcon sx={{ marginRight: 2 }} /> Skills
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
           <ContactsIcon sx={{ marginRight: 2 }} /> Contact
@@ -108,6 +105,11 @@ const TopBar = () => {
           <CodeIcon />
         </Button>
       </Tooltip>
+      <Tooltip title="Skills">
+        <Button color="inherit">
+          <BuildIcon />
+        </Button>
+      </Tooltip>
       <Tooltip title="Contact">
         <Button color="inherit">
           <ContactsIcon />
@@ -129,6 +131,7 @@ const TopBar = () => {
       <Button color="inherit">About</Button>
       <Button color="inherit">Experience</Button>
       <Button color="inherit">Projects</Button>
+      <Button color="inherit">Skills</Button>
       <Button color="inherit">Contact</Button>
       <Button color="inherit">Resume</Button>
       <Tooltip title="Switch theme">
@@ -141,9 +144,9 @@ const TopBar = () => {
     <AppBar
       elevation={0}
       sx={{
-        backgroundColor: "var(--topbar-background)",
-        borderBottom: "1px solid var(--divider)",
-        color: "var(--text-primary)",
+        backgroundColor: 'var(--topbar-background)',
+        borderBottom: '1px solid var(--divider)',
+        color: 'var(--text-primary)',
       }}
     >
       <Toolbar>

@@ -16,7 +16,7 @@ const ProfileCard = () => {
         borderRadius: '10px',
       }}
     >
-      <CardMedia component="img" height="440" image={PersonalPhoto} alt="Sean Johnson" />
+      <CardMedia component="img" height="390" image={PersonalPhoto} alt="Sean Johnson" />
       <CardContent sx={{ textAlign: 'center' }}>
         <Typography variant="h4" component="div">
           Sean Johnson

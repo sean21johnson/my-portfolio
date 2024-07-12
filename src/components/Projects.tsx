@@ -13,7 +13,7 @@ const projects = [
   },
   {
     videoUrl: 'https://www.youtube.com/embed/c2aobsDeuXo',
-    title: 'Daily Feed Page',
+    title: 'Daily Feed',
     description:
       'Created informative daily standup page, outlining team progress and bottlenecks. Second most visited page in the app and has significantly improved team collaboration.',
   },
@@ -43,7 +43,7 @@ const Projects = () => {
         gutterBottom
         sx={{ color: 'var(--text-primary)', marginTop: 15 }}
       >
-        Projects & Features
+        Professional Projects & Features
       </Typography>
       <Slider {...settings}>
         {projects.map((project, index) => (

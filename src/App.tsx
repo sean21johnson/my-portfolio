@@ -4,6 +4,7 @@ import ProfileAccordion from './components/ProfileAccordion';
 import Timeline from './components/Timeline';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import TechnicalSkills from './components/TechnicalSkills';
 import * as Layout from './components/Layout';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       </Layout.ProfileLayout>
       <Experience />
       <Projects />
+      <TechnicalSkills />
     </>
   );
 };
