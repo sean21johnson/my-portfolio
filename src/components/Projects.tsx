@@ -41,7 +41,7 @@ const Projects = () => {
         variant="h5"
         align="center"
         gutterBottom
-        sx={{ color: 'var(--text-primary)', marginTop: 15 }}
+        sx={{ color: 'var(--text-primary)', marginTop: 15, marginBottom: 5 }}
       >
         Professional Projects & Features
       </Typography>

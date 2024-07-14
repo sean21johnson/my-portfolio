@@ -27,102 +27,22 @@ const TechnicalSkills = () => {
   const { mode } = useThemeMode();
 
   const skills = [
-    {
-      title: 'React',
-      description:
-        'Gained proficiency in utilizing React hooks including useState, useEffect, useRef, useCallback, useMemo, useContext, and useReducer.',
-      img: React,
-    },
-    {
-      title: 'TypeScript',
-      description:
-        'Skilled in applying TypeScript for type safety and predicting properties on objects. Utilized interface and type alias for defining custom types. Gained experience in using utility types such as Partial, Pick, and Record.',
-      img: TypeScript,
-    },
-    {
-      title: 'JavaScript',
-      description:
-        'Strong foundation in JavaScript, understanding concepts such as closures, promises, async/await, destructuring, spread/rest operators, ES6+ features, and more.',
-      img: JavaScript,
-    },
-    {
-      title: 'HTML',
-      description:
-        'Strong knowledge of HTML5, understanding semantic elements, and structuring web content effectively. Experience in optimizing HTML for better accessibility and SEO performance.',
-      img: HTML,
-    },
-    {
-      title: 'CSS',
-      description:
-        'Proficient in writing clean and maintainable CSS, utilizing concepts such as Flexbox, Grid, and media queries for responsive design. Skilled in using container queries to create more adaptable layouts.',
-      img: CSS,
-    },
-    {
-      title: 'Apollo GraphQL',
-      description:
-        "Skilled in utilizing Apollo Client for managing GraphQL data in React applications. Experience in writing efficient queries and mutations, and leveraging Apollo's caching and state management features.",
-      img: Apollo,
-    },
-    {
-      title: 'Redux',
-      description:
-        'Understanding the Redux flow: actions, reducers, and store. Experienced in using Redux Toolkit for simpler syntax and efficient development. Gained proficiency in handling asynchronous actions with redux-thunk.',
-      img: Redux,
-    },
-    {
-      title: 'React Testing Library',
-      description:
-        'Experience in writing robust unit tests for React components using React Testing Library. Understanding of concepts like mocks, spies, and async testing.',
-      img: RTL,
-    },
-    {
-      title: 'Jest',
-      description:
-        'Experienced in using Jest for testing JavaScript applications. Proficient in writing unit tests, integration tests, and setting up mock functions to ensure code reliability and correctness.',
-      img: Jest,
-    },
-    {
-      title: 'Node.js',
-      description:
-        'Proficient in building scalable server-side applications using Node.js. Experienced in working with asynchronous programming and event-driven architecture.',
-      img: Node,
-    },
-    {
-      title: 'Express',
-      description:
-        'Skilled in developing robust web applications using Express. Experience in building RESTful APIs, middleware integration, and handling server-side logic.',
-      img: mode === 'dark' ? ExpressDark : Express,
-    },
-    {
-      title: 'PostgreSQL',
-      description:
-        'Experienced in using PostgreSQL for database management. Proficient in writing complex SQL queries, designing schemas, and ensuring data integrity.',
-      img: Postgre,
-    },
-    {
-      title: 'Webpack',
-      description:
-        'Proficient in using Webpack for bundling JavaScript applications. Experienced in configuring loaders, plugins, and optimizing builds for performance.',
-      img: Webpack,
-    },
-    {
-      title: 'Git',
-      description:
-        'Experienced in version control using Git. Proficient in branching, merging, and resolving conflicts. Familiar with collaborative workflows in GitHub.',
-      img: Git,
-    },
-    {
-      title: 'GitHub',
-      description:
-        'Skilled in using GitHub for source code management and collaboration. Experienced in managing repositories, pull requests, and continuous integration.',
-      img: mode === 'dark' ? GithubDark : Github,
-    },
-    {
-      title: 'Figma',
-      description:
-        'Experienced in using Figma for UI/UX design. Proficient in analyzing figma designs and collaborating with designers to translate designs into code.',
-      img: Figma,
-    },
+    { title: 'React', img: React },
+    { title: 'TypeScript', img: TypeScript },
+    { title: 'JavaScript', img: JavaScript },
+    { title: 'HTML', img: HTML },
+    { title: 'CSS', img: CSS },
+    { title: 'Apollo GraphQL', img: Apollo },
+    { title: 'Redux', img: Redux },
+    { title: 'React Testing Library', img: RTL },
+    { title: 'Jest', img: Jest },
+    { title: 'Node.js', img: Node },
+    { title: 'Express', img: mode === 'dark' ? ExpressDark : Express },
+    { title: 'PostgreSQL', img: Postgre },
+    { title: 'Webpack', img: Webpack },
+    { title: 'Git', img: Git },
+    { title: 'GitHub', img: mode === 'dark' ? GithubDark : Github },
+    { title: 'Figma', img: Figma },
   ];
 
   return (
@@ -132,11 +52,11 @@ const TechnicalSkills = () => {
         variant="h5"
         align="center"
         gutterBottom
-        sx={{ color: 'var(--text-primary)', marginTop: 20 }}
+        sx={{ color: 'var(--text-primary)', marginTop: 20, marginBottom: 5 }}
       >
         Technical Skills
       </Typography>
-      <ImageList cols={4} gap={50}>
+      <ImageList cols={8} gap={30}>
         {skills.map((skill, index) => (
           <ImageListItem key={index} className="flip-card">
             <div className="flip-card-inner">
@@ -152,7 +72,6 @@ const TechnicalSkills = () => {
                 <Typography variant="h6" sx={{ marginBottom: '10px' }}>
                   {skill.title}
                 </Typography>
-                <Typography variant="body2">{skill.description}</Typography>
               </div>
             </div>
           </ImageListItem>
