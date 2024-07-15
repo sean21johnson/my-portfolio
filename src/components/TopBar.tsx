@@ -18,6 +18,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import DescriptionIcon from '@mui/icons-material/Description';
 import BuildIcon from '@mui/icons-material/Build';
+import { Link as ScrollLink } from 'react-scroll';
 
 import useThemeMode from '../hooks/useThemeMode';
 import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
@@ -46,6 +47,8 @@ const TopBar = () => {
     </>
   );
 
+  const scrollOffset = -100; // Adjust this value based on your padding-top
+
   const mobileScreenContent = (
     <>
       <IconButton
@@ -66,22 +69,34 @@ const TopBar = () => {
         sx={{ width: '100%' }}
       >
         <MenuItem onClick={handleCloseDropdown}>
-          <AccountCircleIcon sx={{ marginRight: 2 }} /> About
+          <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+            <AccountCircleIcon sx={{ marginRight: 2 }} /> About
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <WorkIcon sx={{ marginRight: 2 }} /> Experience
+          <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+            <WorkIcon sx={{ marginRight: 2 }} /> Experience
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <CodeIcon sx={{ marginRight: 2 }} /> Projects
+          <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+            <CodeIcon sx={{ marginRight: 2 }} /> Projects
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <BuildIcon sx={{ marginRight: 2 }} /> Skills
+          <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+            <BuildIcon sx={{ marginRight: 2 }} /> Skills
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <ContactsIcon sx={{ marginRight: 2 }} /> Contact
+          <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+            <ContactsIcon sx={{ marginRight: 2 }} /> Contact
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={handleCloseDropdown}>
-          <DescriptionIcon sx={{ marginRight: 2 }} /> Resume
+          <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
+            <DescriptionIcon sx={{ marginRight: 2 }} /> Resume
+          </ScrollLink>
         </MenuItem>
         <MenuItem onClick={toggleThemeMode}>{themeIcon} Theme</MenuItem>
       </Menu>
@@ -91,34 +106,46 @@ const TopBar = () => {
   const narrowScreenContent = (
     <>
       <Tooltip title="About">
-        <Button color="inherit">
-          <AccountCircleIcon />
-        </Button>
+        <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <AccountCircleIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Experience">
-        <Button color="inherit">
-          <WorkIcon />
-        </Button>
+        <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <WorkIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Projects">
-        <Button color="inherit">
-          <CodeIcon />
-        </Button>
+        <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <CodeIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Skills">
-        <Button color="inherit">
-          <BuildIcon />
-        </Button>
+        <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <BuildIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Contact">
-        <Button color="inherit">
-          <ContactsIcon />
-        </Button>
+        <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <ContactsIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Resume">
-        <Button color="inherit">
-          <DescriptionIcon />
-        </Button>
+        <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
+          <Button color="inherit">
+            <DescriptionIcon />
+          </Button>
+        </ScrollLink>
       </Tooltip>
       <Tooltip title="Switch theme">
         <Button color="inherit">{themeIcon}</Button>
@@ -128,12 +155,24 @@ const TopBar = () => {
 
   const wideScreenContent = (
     <>
-      <Button color="inherit">About</Button>
-      <Button color="inherit">Experience</Button>
-      <Button color="inherit">Projects</Button>
-      <Button color="inherit">Skills</Button>
-      <Button color="inherit">Contact</Button>
-      <Button color="inherit">Resume</Button>
+      <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">About</Button>
+      </ScrollLink>
+      <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">Experience</Button>
+      </ScrollLink>
+      <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">Projects</Button>
+      </ScrollLink>
+      <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">Skills</Button>
+      </ScrollLink>
+      <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">Contact</Button>
+      </ScrollLink>
+      <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
+        <Button color="inherit">Resume</Button>
+      </ScrollLink>
       <Tooltip title="Switch theme">
         <Button color="inherit">{themeIcon}</Button>
       </Tooltip>

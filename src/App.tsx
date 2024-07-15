@@ -12,17 +12,27 @@ const App = () => {
   return (
     <>
       <TopBar />
-      <Layout.ProfileLayout>
-        <ProfileCard />
-        <Layout.ProfileLayoutRight>
-          <ProfileAccordion />
-          <Timeline />
-        </Layout.ProfileLayoutRight>
-      </Layout.ProfileLayout>
-      <Experience />
-      <Projects />
-      <TechnicalSkills />
-      <Footer />
+      <div id="about">
+        <Layout.ProfileLayout>
+          <ProfileCard />
+          <Layout.ProfileLayoutRight>
+            <ProfileAccordion />
+            <Timeline />
+          </Layout.ProfileLayoutRight>
+        </Layout.ProfileLayout>
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="skills">
+        <TechnicalSkills />
+      </div>
+      <div id="contact">
+        <Footer />
+      </div>
     </>
   );
 };
