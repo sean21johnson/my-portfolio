@@ -1,17 +1,24 @@
-import { useState, useEffect, useMemo, ReactNode } from "react";
-import { ThemeProvider } from "@mui/material/styles";
+import { useState, useEffect, useMemo, ReactNode } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
 
-import ThemeModeContext from "../contexts/ThemeModeContext";
-import { lightTheme, darkTheme } from "../themes/theme";
+import ThemeModeContext from '../contexts/ThemeModeContext';
+import { lightTheme, darkTheme } from '../themes/theme';
 
 const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
-  const [mode, setMode] = useState<"light" | "dark">("light");
+  const [mode, setMode] = useState<'light' | 'dark'>(() => {
+    const savedMode = localStorage.getItem('themeMode');
+    return savedMode ? (savedMode as 'light' | 'dark') : 'dark';
+  });
 
   const toggleThemeMode = () => {
-    setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+    setMode((prevMode) => {
+      const newMode = prevMode === 'light' ? 'dark' : 'light';
+      localStorage.setItem('themeMode', newMode);
+      return newMode;
+    });
   };
 
-  const theme = mode === "light" ? lightTheme : darkTheme;
+  const theme = mode === 'light' ? lightTheme : darkTheme;
 
   const contextValue = useMemo(
     () => ({
@@ -22,7 +29,7 @@ const ThemeModeProvider = ({ children }: { children: ReactNode }) => {
   );
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", mode);
+    document.documentElement.setAttribute('data-theme', mode);
   }, [mode]);
 
   return (

@@ -121,7 +121,6 @@ const AccordionComponent = () => {
         <AccordionDetails>
           <ul style={{ marginTop: -6, fontSize: 14 }}>
             <li>Frontend Engineer @ ZenHub since October 2021</li>
-            <li>Thinkful Software Engineering Immersive Program 2021 graudate</li>
             <li>Career pivot to software development in 2020</li>
             <li>NYU Stern School of Business 2018 MBA graduate</li>
             <li>10 years in financial services roles</li>
