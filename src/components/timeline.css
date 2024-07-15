@@ -1,0 +1,28 @@
+.timeline-step-button {
+  position: relative;
+}
+
+.timeline-step-button:after {
+  content: '';
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  width: 75%;
+  height: 2px;
+  background-color: var(--divider);
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.timeline-step-button:hover .MuiStepLabel-label {
+  background-color: var(--carousel-dot-hover) !important;
+  color: var(--text-hover) !important; /* Use a variable for the hover text color */
+}
+
+:root {
+  --text-hover: #ffffff; /* Default hover text color */
+}
+
+[data-theme='dark'] {
+  --text-hover: black; /* Hover text color for dark mode */
+}

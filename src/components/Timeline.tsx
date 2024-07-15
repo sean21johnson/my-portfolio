@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Box, Card, CardContent, Typography, Stepper, StepButton } from '@mui/material';
 import useThemeMode from '../hooks/useThemeMode';
 
+import './timeline.css';
+
 const timelineEvents = [
   {
     year: '2011',
@@ -91,11 +93,16 @@ const Timeline = () => {
       >
         Professional Timeline
       </Typography>
-      <Stepper alternativeLabel nonLinear sx={{ marginBottom: -1 }}>
+      <Stepper
+        alternativeLabel
+        nonLinear
+        sx={{ marginBottom: -1, position: 'relative', zIndex: 1 }}
+      >
         {timelineEvents.map((event, index) => (
           <StepButton
             key={index}
             onClick={() => handleStepClick(event)}
+            className="timeline-step-button"
             sx={{
               '& .MuiStepLabel-root .MuiStepIcon-root': {
                 color: selectedEvent?.year === event.year ? 'var(--primary-color)' : 'gray',
