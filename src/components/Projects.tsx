@@ -1,5 +1,7 @@
 import { Box, Typography, Card, CardContent } from '@mui/material';
 import Slider from 'react-slick';
+import useThemeMode from '../hooks/useThemeMode';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './custom-slick.css'; // Import your custom slick styles
@@ -26,6 +28,8 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { mode } = useThemeMode();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -57,7 +61,13 @@ const Projects = () => {
               allowFullScreen
               style={{ borderRadius: 10, border: 'none' }}
             ></iframe>
-            <Card sx={{ mt: 1, p: 0 }}>
+            <Card
+              sx={{
+                mt: 1,
+                p: 0,
+                border: mode === 'dark' ? '1px solid var(--divider)' : '1px solid transparent',
+              }}
+            >
               <CardContent>
                 <Typography
                   variant="h6"

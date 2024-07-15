@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Card, CardContent, Typography, Stepper, Step, StepButton } from '@mui/material';
+import { Box, Card, CardContent, Typography, Stepper, StepButton } from '@mui/material';
+import useThemeMode from '../hooks/useThemeMode';
 
 const timelineEvents = [
   {
@@ -48,6 +49,8 @@ const timelineEvents = [
 const Timeline = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(timelineEvents[0]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const { mode } = useThemeMode();
 
   const handleStepClick = (timelineEvent: any) => {
     setSelectedEvent(timelineEvent);
@@ -118,7 +121,11 @@ const Timeline = () => {
       </Stepper>
       {selectedEvent && (
         <Box mt={3}>
-          <Card>
+          <Card
+            sx={{
+              border: mode === 'dark' ? '1px solid var(--divider)' : '1px solid transparent',
+            }}
+          >
             <CardContent>
               <Typography variant="h6">{selectedEvent.title}</Typography>
               <Typography variant="body2">{selectedEvent.description}</Typography>

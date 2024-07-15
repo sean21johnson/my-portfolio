@@ -9,9 +9,7 @@ const ProfileCard = () => {
     <Card
       sx={{
         maxWidth: 400,
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        border:
-          mode === 'dark' ? '1px solid var(--divider)' : '1px solid var(--background-default)',
+        border: mode === 'dark' ? '1px solid var(--divider)' : '1px solid transparent',
         backgroundColor: 'var(--background-paper)',
         borderRadius: '10px',
       }}

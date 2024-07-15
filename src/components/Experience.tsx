@@ -55,7 +55,12 @@ const Experience = () => {
         </a>
       </Box>
       <Box sx={{ mt: 2 }}>
-        <Card sx={{ mb: 4 }}>
+        <Card
+          sx={{
+            mb: 4,
+            border: mode === 'dark' ? '1px solid var(--divider)' : ' 1px solid transparent',
+          }}
+        >
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
               <a

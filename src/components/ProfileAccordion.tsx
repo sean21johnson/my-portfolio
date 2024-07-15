@@ -127,7 +127,6 @@ const AccordionComponent = () => {
             <li>10 years in financial services roles</li>
             <li>Enjoy exercising, traveling, and reading</li>
           </ul>
-          {/* </Typography> */}
         </AccordionDetails>
       </Accordion>
     </div>
