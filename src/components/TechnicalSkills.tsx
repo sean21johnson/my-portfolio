@@ -46,7 +46,7 @@ const TechnicalSkills = () => {
   ];
 
   return (
-    <Box sx={{ maxWidth: 1100, margin: 'auto', width: '100%', mt: 4 }}>
+    <Box sx={{ maxWidth: 1100, margin: 'auto', width: '100%', mt: 4, mb: 4 }}>
       <Typography
         mb={3}
         variant="h5"
