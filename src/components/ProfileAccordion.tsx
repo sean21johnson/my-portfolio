@@ -70,7 +70,7 @@ const AccordionComponent = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography mt={-2} sx={{ fontSize: 14 }}>
-            <strong>Intermediate Frontend Engineer @ Zenhub: </strong>Collaborated with product
+            <strong>Intermediate Frontend Engineer @ Zenhub: </strong>Collaborate with product
             managers, designers, and engineers to build robust project management suite. Led
             projects and delivered impactful results through effective communication, collaboration,
             and my technical expertise. Developed core product features that drive user growth and

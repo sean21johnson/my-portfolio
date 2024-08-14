@@ -11,7 +11,9 @@ import * as Layout from './components/Layout';
 const App = () => {
   return (
     <>
-      <TopBar />
+      <div id="topbar">
+        <TopBar />
+      </div>
       <div id="about">
         <Layout.ProfileLayout>
           <ProfileCard />

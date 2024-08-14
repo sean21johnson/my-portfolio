@@ -8,6 +8,7 @@ import {
   Button,
   Menu,
   MenuItem,
+  Box,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -93,10 +94,16 @@ const TopBar = () => {
             <ContactsIcon sx={{ marginRight: 2 }} /> Contact
           </ScrollLink>
         </MenuItem>
+        {/* Replace ScrollLink with an anchor tag */}
         <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
+          <a
+            href="/SeanJohnson.Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <DescriptionIcon sx={{ marginRight: 2 }} /> Resume
-          </ScrollLink>
+          </a>
         </MenuItem>
         <MenuItem onClick={toggleThemeMode}>{themeIcon} Theme</MenuItem>
       </Menu>
@@ -141,11 +148,16 @@ const TopBar = () => {
         </ScrollLink>
       </Tooltip>
       <Tooltip title="Resume">
-        <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
-          <Button color="inherit">
-            <DescriptionIcon />
-          </Button>
-        </ScrollLink>
+        {/* Replace ScrollLink with an anchor tag */}
+        <Button
+          color="inherit"
+          component="a"
+          href="/SeanJohnson.Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <DescriptionIcon />
+        </Button>
       </Tooltip>
       <Tooltip title="Switch theme">
         <Button color="inherit">{themeIcon}</Button>
@@ -170,9 +182,16 @@ const TopBar = () => {
       <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
         <Button color="inherit">Contact</Button>
       </ScrollLink>
-      <ScrollLink to="resume" smooth={true} duration={500} offset={scrollOffset}>
-        <Button color="inherit">Resume</Button>
-      </ScrollLink>
+      {/* Replace ScrollLink with an anchor tag */}
+      <Button
+        color="inherit"
+        component="a"
+        href="/SeanJohnson.Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Resume
+      </Button>
       <Tooltip title="Switch theme">
         <Button color="inherit">{themeIcon}</Button>
       </Tooltip>
@@ -189,9 +208,17 @@ const TopBar = () => {
       }}
     >
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Sean Johnson
-        </Typography>
+        <Box
+          component={ScrollLink}
+          to="topbar"
+          smooth={true}
+          duration={500}
+          sx={{ flexGrow: 1, cursor: 'pointer', display: 'inline-block' }}
+        >
+          <Typography variant="h6" component="span">
+            Sean Johnson
+          </Typography>
+        </Box>
         {mobileScreenOnly && mobileScreenContent}
         {narrowScreenOnly && narrowScreenContent}
         {wideScreenOnly && wideScreenContent}
