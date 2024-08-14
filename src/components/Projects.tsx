@@ -1,6 +1,7 @@
 import { Box, Typography, Card, CardContent } from '@mui/material';
 import Slider from 'react-slick';
 import useThemeMode from '../hooks/useThemeMode';
+import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -30,6 +31,17 @@ const projects = [
 const Projects = () => {
   const { mode } = useThemeMode();
 
+  const { mobileScreenOnly, alternativeBreakpoint } = useScreenBreakpoints();
+
+  const getWidth = () => {
+    if (mobileScreenOnly) {
+      return 400;
+    } else if (alternativeBreakpoint) {
+      return 600;
+    }
+    return 1100;
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -39,13 +51,13 @@ const Projects = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 1100, margin: 'auto', width: '100%' }}>
+    <Box sx={{ width: getWidth(), margin: 'auto' }}>
       <Typography
         mb={3}
         variant="h5"
         align="center"
         gutterBottom
-        sx={{ color: 'var(--text-primary)', marginTop: 15, marginBottom: 5 }}
+        sx={{ color: 'var(--text-primary)', marginTop: 10, marginBottom: 5 }}
       >
         Professional Projects & Features
       </Typography>

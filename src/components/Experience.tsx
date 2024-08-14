@@ -1,15 +1,33 @@
-import { Box, Card, CardContent, Typography, Grid } from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import ZenhubImage from '../assets/Zenhub.png';
 import ZenhubLogo from '../assets/ZenhubLogo.png';
 import ZenhubLogoDark from '../assets/ZenhubLogoDark.png';
 
 import useThemeMode from '../hooks/useThemeMode';
+import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
 
 const Experience = () => {
   const { mode } = useThemeMode();
+  const { mobileScreenOnly, alternativeBreakpoint } = useScreenBreakpoints();
+
+  const getWidth = () => {
+    if (mobileScreenOnly) {
+      return 400;
+    } else if (alternativeBreakpoint) {
+      return 600;
+    }
+    return 1100;
+  };
 
   return (
-    <Box sx={{ maxWidth: 1100, margin: 'auto', width: '100%', mt: 4 }}>
+    <Box
+      sx={{
+        maxWidth: 1100,
+        margin: 'auto',
+        width: '100%',
+        mt: 4,
+      }}
+    >
       <Typography
         variant="h5"
         align="center"
@@ -50,15 +68,20 @@ const Experience = () => {
           <img
             src={ZenhubImage}
             alt="Zenhub"
-            style={{ maxWidth: '100%', height: 'auto', borderRadius: 10 }}
+            style={{
+              maxWidth: getWidth(),
+              height: 'auto',
+              borderRadius: 10,
+            }}
           />
         </a>
       </Box>
-      <Box sx={{ mt: 2 }}>
+      <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Card
           sx={{
             mb: 4,
             border: mode === 'dark' ? '1px solid var(--divider)' : ' 1px solid transparent',
+            maxWidth: getWidth(),
           }}
         >
           <CardContent>

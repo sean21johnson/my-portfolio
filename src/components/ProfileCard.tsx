@@ -8,7 +8,7 @@ const ProfileCard = () => {
   return (
     <Card
       sx={{
-        maxWidth: 400,
+        width: 400,
         border: mode === 'dark' ? '1px solid var(--divider)' : '1px solid transparent',
         backgroundColor: 'var(--background-paper)',
         borderRadius: '10px',

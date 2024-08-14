@@ -20,11 +20,31 @@ import GithubDark from '../assets/GithubDark.svg';
 import Figma from '../assets/Figma.svg';
 
 import useThemeMode from '../hooks/useThemeMode';
+import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
 
 import './custom-ImageList.css'; // Import your custom styles
 
 const TechnicalSkills = () => {
   const { mode } = useThemeMode();
+  const { alternativeBreakpoint, mobileScreenOnly } = useScreenBreakpoints();
+
+  const getWidth = () => {
+    if (mobileScreenOnly) {
+      return 400;
+    } else if (alternativeBreakpoint) {
+      return 600;
+    }
+    return 1100;
+  };
+
+  const getColumns = () => {
+    if (mobileScreenOnly) {
+      return 4;
+    } else if (alternativeBreakpoint) {
+      return 6;
+    }
+    return 8;
+  };
 
   const skills = [
     { title: 'React', img: React },
@@ -46,7 +66,7 @@ const TechnicalSkills = () => {
   ];
 
   return (
-    <Box sx={{ maxWidth: 1100, margin: 'auto', width: '100%', mt: 4, mb: 4 }}>
+    <Box sx={{ width: getWidth(), margin: 'auto', mt: 4, mb: 4 }}>
       <Typography
         mb={3}
         variant="h5"
@@ -56,7 +76,7 @@ const TechnicalSkills = () => {
       >
         Technical Skills
       </Typography>
-      <ImageList cols={8} gap={30}>
+      <ImageList cols={getColumns()} gap={20}>
         {skills.map((skill, index) => (
           <ImageListItem key={index} className="flip-card">
             <div className="flip-card-inner">

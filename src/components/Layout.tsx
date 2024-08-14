@@ -13,3 +13,7 @@ export const ProfileLayout = ({ children }: PropsType) => {
 export const ProfileLayoutRight = ({ children }: PropsType) => {
   return <div className={styles.profileLayoutRight}>{children}</div>;
 };
+
+export const ContentWrapper = ({ children }: PropsType) => {
+  return <div className={styles.contentWrapper}>{children}</div>;
+};

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Box, Card, CardContent, Typography, Stepper, StepButton } from '@mui/material';
 import useThemeMode from '../hooks/useThemeMode';
+import useScreenBreakpoints from '../hooks/useScreenBreakpoints';
 
 import './timeline.css';
 
@@ -51,6 +52,7 @@ const timelineEvents = [
 const Timeline = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(timelineEvents[0]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const { mobileScreenOnly, alternativeBreakpoint } = useScreenBreakpoints();
 
   const { mode } = useThemeMode();
 
@@ -83,7 +85,13 @@ const Timeline = () => {
   }, []);
 
   return (
-    <Box sx={{ maxWidth: 600, width: '100%' }}>
+    <Box
+      sx={{
+        maxWidth: mobileScreenOnly ? 400 : 600,
+        width: '100%',
+        marginTop: alternativeBreakpoint ? 5 : 0,
+      }}
+    >
       <Typography
         variant="h5"
         align="center"

@@ -14,6 +14,7 @@ const App = () => {
       <div id="topbar">
         <TopBar />
       </div>
+      {/* <Layout.ContentWrapper> */}
       <div id="about">
         <Layout.ProfileLayout>
           <ProfileCard />
@@ -32,6 +33,7 @@ const App = () => {
       <div id="skills">
         <TechnicalSkills />
       </div>
+      {/* </Layout.ContentWrapper> */}
       <div id="contact">
         <Footer />
       </div>
