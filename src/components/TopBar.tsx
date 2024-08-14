@@ -94,7 +94,6 @@ const TopBar = () => {
             <ContactsIcon sx={{ marginRight: 2 }} /> Contact
           </ScrollLink>
         </MenuItem>
-        {/* Replace ScrollLink with an anchor tag */}
         <MenuItem onClick={handleCloseDropdown}>
           <a
             href="/SeanJohnson.Resume.pdf"
@@ -112,43 +111,42 @@ const TopBar = () => {
 
   const narrowScreenContent = (
     <>
-      <Tooltip title="About">
-        <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+      <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+        <Tooltip title="About">
           <Button color="inherit">
             <AccountCircleIcon />
           </Button>
-        </ScrollLink>
-      </Tooltip>
-      <Tooltip title="Experience">
-        <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+        </Tooltip>
+      </ScrollLink>
+      <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+        <Tooltip title="Experience">
           <Button color="inherit">
             <WorkIcon />
           </Button>
-        </ScrollLink>
-      </Tooltip>
-      <Tooltip title="Projects">
-        <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+        </Tooltip>
+      </ScrollLink>
+      <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+        <Tooltip title="Projects">
           <Button color="inherit">
             <CodeIcon />
           </Button>
-        </ScrollLink>
-      </Tooltip>
-      <Tooltip title="Skills">
-        <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+        </Tooltip>
+      </ScrollLink>
+      <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+        <Tooltip title="Skills">
           <Button color="inherit">
             <BuildIcon />
           </Button>
-        </ScrollLink>
-      </Tooltip>
-      <Tooltip title="Contact">
-        <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+        </Tooltip>
+      </ScrollLink>
+      <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+        <Tooltip title="Contact">
           <Button color="inherit">
             <ContactsIcon />
           </Button>
-        </ScrollLink>
-      </Tooltip>
+        </Tooltip>
+      </ScrollLink>
       <Tooltip title="Resume">
-        {/* Replace ScrollLink with an anchor tag */}
         <Button
           color="inherit"
           component="a"
@@ -182,7 +180,6 @@ const TopBar = () => {
       <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
         <Button color="inherit">Contact</Button>
       </ScrollLink>
-      {/* Replace ScrollLink with an anchor tag */}
       <Button
         color="inherit"
         component="a"
