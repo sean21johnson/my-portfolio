@@ -52,13 +52,7 @@ const TopBar = () => {
 
   const mobileScreenContent = (
     <>
-      <IconButton
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        sx={{ mr: 2 }}
-        onClick={handleClick}
-      >
+      <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
         <MenuIcon />
       </IconButton>
       <Menu
@@ -96,7 +90,7 @@ const TopBar = () => {
         </ScrollLink>
         <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
           <a
-            href="/SeanJohnson.Resume.pdf"
+            href="../SeanJohnson.Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -157,7 +151,7 @@ const TopBar = () => {
         <Button
           color="inherit"
           component="a"
-          href="/SeanJohnson.Resume.pdf"
+          href="../SeanJohnson.Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -190,7 +184,7 @@ const TopBar = () => {
       <Button
         color="inherit"
         component="a"
-        href="/SeanJohnson.Resume.pdf"
+        href="../SeanJohnson.Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
