@@ -90,7 +90,7 @@ const TopBar = () => {
         </ScrollLink>
         <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
           <a
-            href="../SeanJohnson.Resume.pdf"
+            href="/SeanJohnson.Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -151,7 +151,7 @@ const TopBar = () => {
         <Button
           color="inherit"
           component="a"
-          href="../SeanJohnson.Resume.pdf"
+          href="/SeanJohnson.Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -184,7 +184,7 @@ const TopBar = () => {
       <Button
         color="inherit"
         component="a"
-        href="../SeanJohnson.Resume.pdf"
+        href="/SeanJohnson.Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
