@@ -69,42 +69,49 @@ const TopBar = () => {
         onClose={handleCloseDropdown}
         sx={{ width: '100%' }}
       >
-        <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+        <ScrollLink to="about" smooth={true} duration={500} offset={scrollOffset}>
+          <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
             <AccountCircleIcon sx={{ marginRight: 2 }} /> About
-          </ScrollLink>
-        </MenuItem>
-        <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+          </MenuItem>
+        </ScrollLink>
+        <ScrollLink to="experience" smooth={true} duration={500} offset={scrollOffset}>
+          <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
             <WorkIcon sx={{ marginRight: 2 }} /> Experience
-          </ScrollLink>
-        </MenuItem>
-        <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+          </MenuItem>
+        </ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={500} offset={scrollOffset}>
+          <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
             <CodeIcon sx={{ marginRight: 2 }} /> Projects
-          </ScrollLink>
-        </MenuItem>
-        <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+          </MenuItem>
+        </ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={500} offset={scrollOffset}>
+          <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
             <BuildIcon sx={{ marginRight: 2 }} /> Skills
-          </ScrollLink>
-        </MenuItem>
-        <MenuItem onClick={handleCloseDropdown}>
-          <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+          </MenuItem>
+        </ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} offset={scrollOffset}>
+          <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContactsIcon sx={{ marginRight: 2 }} /> Contact
-          </ScrollLink>
-        </MenuItem>
-        <MenuItem onClick={handleCloseDropdown}>
+          </MenuItem>
+        </ScrollLink>
+        <MenuItem onClick={handleCloseDropdown} sx={{ display: 'flex', alignItems: 'center' }}>
           <a
             href="/SeanJohnson.Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: 'none', color: 'inherit' }}
+            style={{
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
           >
             <DescriptionIcon sx={{ marginRight: 2 }} /> Resume
           </a>
         </MenuItem>
-        <MenuItem onClick={toggleThemeMode}>{themeIcon} Theme</MenuItem>
+        <MenuItem onClick={toggleThemeMode} sx={{ display: 'flex', alignItems: 'center' }}>
+          {themeIcon} Theme
+        </MenuItem>
       </Menu>
     </>
   );
